@@ -1,4 +1,4 @@
-# ![boo](https://cdn.glitch.com/8cdffa44-0009-4d0b-89c7-731fef3fef0b%2Fboo.png?1533446876161) Sky Island 
+# ![sky island](https://cdn.glitch.com/97457b24-474e-42eb-9358-c8bc7bab1d9f%2Fsky-island.gif?1533846874181) Sky Island 
 ____
 ____
 
@@ -47,14 +47,14 @@ Note: **Users cannot be logged in more than once simultaneously!**
 
 Pressing the **F** key or clicking the **VR Headset Icon** will take you to fullscreen mode.  Note: in fullscreen mode only movement keys are enabled.  Press the **ESC** key to exit fullscreen mode. 
 
-<a href="https://your-art.glitch.me/" no-opener no-referer>**LIVE DEMO**</a>
+<a href="https://sky-island.glitch.me/" no-opener no-referer>**LIVE DEMO**</a>
 
 ____
 
 
 
 **Screenshot**
-![App Screen2](https://cdn.glitch.com/f54ba682-ab47-46e4-bf61-5e68e6053f18%2Fapp-screen.png?1532839987907)
+![App Screen2](https://cdn.glitch.com/97457b24-474e-42eb-9358-c8bc7bab1d9f%2Fapp-screen.gif?1533847350291)
 
 **Environment Settings**  ( index.html )
 ![Environment](https://cdn.glitch.com/f54ba682-ab47-46e4-bf61-5e68e6053f18%2Fenvironment.png?1532871874928)
