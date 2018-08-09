@@ -55,22 +55,28 @@ ____
 
 
 **Screenshot**
+
 ![App Screen2](https://cdn.glitch.com/97457b24-474e-42eb-9358-c8bc7bab1d9f%2Fapp-screen.gif?1533847350291)
 
 **Environment Settings**  ( index.html )
+
 ![Environment](https://cdn.glitch.com/f54ba682-ab47-46e4-bf61-5e68e6053f18%2Fenvironment.png?1532871874928)
 
 ![Environement Options](https://github.com/feiss/aframe-environment-component/raw/master/assets/aframeenvironment.gif?raw=true)
 
 **Sculptris for Easy Creation of Basic Model**
+
 ![Sculptris](https://cdn.glitch.com/f54ba682-ab47-46e4-bf61-5e68e6053f18%2Fsculptris.png?1532961951688)
 
 **Blender Bones Animation**
+
 ![Blender](https://cdn.glitch.com/f54ba682-ab47-46e4-bf61-5e68e6053f18%2Fblender.png?1532961633005)
 
 **Blender Export as .glb**  
+
 ( plugin for Blender v2.79 <a href="https://github.com/KhronosGroup/glTF-Blender-Exporter" no-opener no-referer>here</a>. Note: Blender v2.80 will have built-in plugin )
 ![.glb export](https://cdn.glitch.com/f54ba682-ab47-46e4-bf61-5e68e6053f18%2Fexport.png?1532962417545)
 
 ## Special Thanks
+
 I would like to extend special thanks to <a href="https://sketchfab.com/ZOSK" no-opener no-referer>**ZOSK Studios**</a> for the creation of the sky island model used in this project.
