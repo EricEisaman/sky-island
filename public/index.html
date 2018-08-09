@@ -1,0 +1,144 @@
+<html>
+  <head>
+    <meta property="og:title" content="3D Multiplayer Design with A-Frame and Node.js"/>
+    <meta property="og:image" content="https://cdn.glitch.com/f54ba682-ab47-46e4-bf61-5e68e6053f18%2Fapp-screen.png?1532839987907"/>
+    <meta property="og:description" content="This project introduces fundamentals of multiplayer game design with A-Frame and Node.js."/>
+    <meta property="og:url" content="//your-art.glitch.me/" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:500" rel="stylesheet" type="text/css">
+    <link href="login.css" rel="stylesheet" type="text/css" />
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/feiss/aframe-environment-component/ad57b15d/dist/aframe-environment-component.min.js"></script>
+    <script src="https://rawgit.com/takahirox/aframe-rain/master/build/aframe-rain.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.12.4/dist/aframe-extras.min.js"></script>
+  </head>
+  <body>
+    <div style="position:relative;">
+    <a-scene> 
+        
+      <!--<a-entity animation-mixer
+                gltf-model="url(https://cdn.glitch.com/f54ba682-ab47-46e4-bf61-5e68e6053f18%2Fthing-idle.glb?1532828880828)"
+                position="0 0 0"
+                static-body="geometry:sphere"></a-entity>-->
+      
+      <!--Sky Island-->
+      <a-entity id="sky-island"
+                scale="300 300 300"
+                position="-20 -150 0">
+        
+        <a-entity id="sky-island-model"
+                  gltf-model="url(https://cdn.glitch.com/97457b24-474e-42eb-9358-c8bc7bab1d9f%2Fsky_island.glb?1533741867928)"></a-entity>
+        
+        <a-entity id="sky-island-physics">
+          
+          
+          <a-box id="big-top" class="toggle-opacity" position="-0.083 0.91 0.014" width="0.36" height="0.01" depth="0.2" opacity="1" static-body="sphereRadius:NaN" geometry="width:0.118;height:0.036" material=""></a-box><a-box id="big-top-2" class="toggle-opacity" position="0.051 0.91 0.011" width="0.36" height="0.01" depth="0.2" opacity="1" static-body="sphereRadius:NaN" geometry="width:0.13;height:0.036"></a-box><a-box id="top-2" class="toggle-opacity" position="-0.018 0.91 -0.024" width="0.36" height="0.01" depth="0.2" opacity="1" static-body="sphereRadius:NaN" geometry="depth:0.13;width:0.011;height:0.036"></a-box><a-box id="top-3" class="toggle-opacity" position="-0.018 0.91 0.081" width="0.36" height="0.01" depth="0.2" opacity="1" static-body="sphereRadius:NaN" geometry="depth:0.06;width:0.011;height:0.036"></a-box><a-box id="top-4" class="toggle-opacity" position="-0.158 0.91 0.024" width="0.36" height="0.01" depth="0.2" opacity="1" static-body="sphereRadius:NaN" geometry="width:0.04;depth:0.1;height:0.036"></a-box><a-box id="top-5" class="toggle-opacity" position="-0.196 0.91 0.037" width="0.36" height="0.01" depth="0.2" opacity="1" static-body="sphereRadius:NaN" geometry="depth:0.03;width:0.04;height:0.036"></a-box><a-box id="top-6" class="toggle-opacity" position="-0.046 0.967 0.045" width="0.36" height="0.01" depth="0.2" opacity="1" static-body="sphereRadius:NaN" geometry="depth:0.075;width:0.03;height:0.036"></a-box><a-box id="top-7" class="toggle-opacity" position="0.015 0.967 0.045" width="0.36" height="0.01" depth="0.2" opacity="1" static-body="sphereRadius:NaN" geometry="width:0.03;height:0.036;depth:0.075"></a-box><a-box id="top-8" class="toggle-opacity" position="-0.015 0.967 0.02" width="0.36" height="0.01" depth="0.2" opacity="1" static-body="sphereRadius:NaN" geometry="depth:0.022;width:0.032;height:0.036"></a-box><a-box id="top-9" class="toggle-opacity" position="-0.015 0.967 0.072" width="0.36" height="0.01" depth="0.2" opacity="1" static-body="sphereRadius:NaN" geometry="depth:0.022;width:0.032;height:0.036"></a-box><a-box id="top-10" class="toggle-opacity" position="-0.015 0.962 0.057" width="0.36" height="0.01" depth="0.2" opacity="1" static-body="sphereRadius:NaN" geometry="depth:0.011;width:0.032;height:0.036"></a-box><a-box id="top-11" class="toggle-opacity" position="-0.015 0.962 0.036" width="0.36" height="0.01" depth="0.2" opacity="1" static-body="sphereRadius:NaN" geometry="width:0.032;height:0.036;depth:0.011"></a-box><a-box id="top-12" class="toggle-opacity" position="-0.005 0.962 0.046" width="0.36" height="0.01" depth="0.2" opacity="1" static-body="sphereRadius:NaN" geometry="width:0.011;height:0.036;depth:0.011"></a-box><a-box id="top-13" class="toggle-opacity" position="-0.026 0.962 0.046" width="0.36" height="0.01" depth="0.2" opacity="1" static-body="sphereRadius:NaN" geometry="depth:0.011;height:0.036;width:0.011"></a-box>
+        <a-entity id="sky-stairs">
+          <a-box id="sky-stairs-1" class="toggle-opacity" position="0.088 0.863 -0.149" width="0.36" height="0.01" depth="0.2" opacity="1" static-body="sphereRadius:NaN" geometry="depth:0.01;height:0.005;width:0.01" material=""></a-box>
+          <a-box id="sky-stairs-2" class="toggle-opacity" position="0.088 0.858 -0.139" width="0.36" height="0.01" depth="0.2" opacity="1" static-body="sphereRadius:NaN" geometry="depth:0.01;height:0.005;width:0.01" material=""></a-box>
+          <a-box id="sky-stairs-3" class="toggle-opacity" position="0.088 0.853 -0.124" width="0.36" height="0.01" depth="0.2" opacity="1" static-body="sphereRadius:NaN" geometry="depth:0.023;height:0.005;width:0.01" material=""></a-box>
+          <a-box id="sky-stairs-4" class="toggle-opacity" position="0.088 0.858 -0.108" width="0.36" height="0.01" depth="0.2" opacity="1" static-body="sphereRadius:NaN" geometry="depth:0.01;height:0.005;width:0.01" material=""></a-box>
+          <a-box id="sky-stairs-5" class="toggle-opacity" position="0.088 0.863 -0.098" width="0.36" height="0.01" depth="0.2" opacity="1" static-body="sphereRadius:NaN" geometry="depth:0.01;height:0.0065;width:0.01" material=""></a-box>
+          <a-box id="sky-stairs-6" class="toggle-opacity" position="0.088 0.869 -0.088" width="0.36" height="0.01" depth="0.2" opacity="1" static-body="sphereRadius:NaN" geometry="depth:0.01;height:0.005;width:0.01" material=""></a-box>
+        </a-entity>
+        <a-box id="sky-patio" class="toggle-opacity" position="0.088 0.87 -0.018" width="0.36" height="0.01" depth="0.2" opacity="1" static-body="sphereRadius:NaN" geometry="depth:0.13;height:0.013;width:0.052" material=""></a-box>
+          <a-box id="sky-patio-2" class="toggle-opacity" position="0.016 0.87 0.005" width="0.36" height="0.01" depth="0.2" opacity="1" static-body="shape:box;sphereRadius:NaN" geometry="depth:0.032;height:0.013;width:0.118" material="flatShading:true"></a-box>
+          <a-box id="sky-patio-2-end" class="toggle-opacity" position="-0.047 0.872 0.016" width="0.36" height="0.01" depth="0.2" opacity="1" static-body="sphereRadius:NaN" geometry="depth:0.01;height:0.008;width:0.01" material=""></a-box>
+          <a-box id="sky-patio-3-end" class="toggle-opacity" position="-0.088 0.872 0.016" width="0.36" height="0.01" depth="0.2" opacity="1" static-body="sphereRadius:NaN" geometry="depth:0.01;height:0.008;width:0.011" material=""></a-box>
+          <a-box id="sky-patio-3-end-2" class="toggle-opacity" position="-0.099 0.872 0.01" width="0.36" height="0.01" depth="0.2" opacity="1" static-body="sphereRadius:NaN" geometry="depth:0.021;height:0.008;width:0.011" material=""></a-box>
+          <a-box id="sky-patio-3" class="toggle-opacity" position="-0.129 0.872 0.005" width="0.36" height="0.01" depth="0.2" opacity="1" static-body="sphereRadius:NaN" geometry="depth:0.0312;height:0.008;width:0.052" material=""></a-box>
+          <a-box id="sky-tree-1" class="toggle-opacity" position="-0.015 0.811 0.045" width="0.36" height="0.01" depth="0.2" opacity="1" static-body="sphereRadius:NaN" geometry="depth:0.031;height:0.008;width:0.031" material=""></a-box>
+          
+        </a-entity>
+        
+      </a-entity>
+      
+      
+      
+      
+      
+      <!-- Environment -->
+      <a-entity environment="shadow: true; playArea:3; shadowSize: 10; preset:forest; dressingAmount: 30;fog:0.7" ></a-entity> 
+      
+      
+      <!--Ground-->
+      <a-box id="ground" position="0 -0.5 0"
+              width="400" height="1" depth="400"
+              opacity="0"
+              static-body></a-box>
+      
+       <!-- Camera -->
+      <a-entity id="player"
+                camera="userHeight: 1.8" 
+                universal-controls 
+                position="0 1.8 0"
+                rotation="0 0 0"
+                kinematic-body="radius: 0.8"
+                jump-ability="maxJumps: 200
+                              distance: 5">
+      </a-entity>  
+      
+      
+      
+      
+    
+      
+      
+    </a-scene>
+    <div id="dialog-container" style="position:absolute; top:0px; left:0px; z-index:1000;width:600">
+      <dialog id="dialog_" style="width:600">
+        <input id="msg_" placeholder="Enter your message here." style="width:460">
+        <input id="key_" placeholder="key" style="width:200">
+        <button id="submit-message_">
+          Submit Message
+        </button>
+      </dialog>
+      <dialog id="dialog">
+        <h3 class="modal-header">Send a Message or Change your Avatar</h3>
+        <div class="modal-body">
+          <input id="msg" placeholder="Enter your message.">
+        </div>
+        <footer id="btns" class="modal-footer">
+
+        </footer>
+      </dialog>
+    </div>
+      <div id="login">
+          <div class="login-background">
+          <div class="login">
+            <div class="login-header">
+              <h1 id="game-name">Login</h1>
+            </div>
+            <div class="login-form">
+              <h3>Username:</h3>
+              <input id="un" type="text" placeholder="Username"/><br>
+              <h3>Password:</h3>
+              <input id="pw" type="password" placeholder="Password"/>
+              <br>
+              <input type="button" value="Login" class="login-button"/>
+              <br>
+            </div>
+        </div>
+        <div class="error-page">
+          <div class="try-again">Error: Try again?</div>
+        </div>
+      </div>  
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client-config.js"></script>
+    <script src="dialog.js"></script>
+    <script src="bgm.js"></script>
+    <script src="sounds.js"></script>
+    <script src="voice.js"></script>
+    <script src="thruster.js"></script>
+    <script src="client-socket-control.js"></script>
+    <script src="client.js"></script>
+    <script src="login.js"></script>
+    <script src="pshape-helper.js"></script>
+  </body>
+</html>
