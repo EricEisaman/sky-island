@@ -1,8 +1,16 @@
 /* Start Things Going After the Scene is Loaded and Login Complete
  ————————————————————————————————————————————————————————————————*/
 window.gameHasBegun = false;
-document.querySelector('a-scene').addEventListener('loaded', function () {
-  
+window.scene = document.querySelector('a-scene');
+if(window.scene.hasLoaded) {
+  setup()
+} else {
+  document.querySelector('a-scene').addEventListener('loaded', function () {
+    setup();
+  });
+}
+function setup () {
+  console.log("SCENE LOADED ...");
   //var element = document.querySelector('#some-id');
   window.scene = document.querySelector('a-scene');
   var player = document.querySelector('#player');
@@ -162,5 +170,4 @@ document.querySelector('a-scene').addEventListener('loaded', function () {
   
   }
   
-
-});
+}
