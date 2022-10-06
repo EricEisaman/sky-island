@@ -17,8 +17,8 @@ window.config = {
  msg:{
   color: "#000"
  },
- //Soundcloud track numbers from share/embed code
- songs:[120585130,156420873,180582345,1801713],
+ //Links to songs separated by commas
+ songs:["https://cdn.glitch.global/97457b24-474e-42eb-9358-c8bc7bab1d9f/funky.mp3?v=1665088070925"],
  releasePointerLockOnUI: false,
  //SEE REF. http://keycode.info/
  keys:{

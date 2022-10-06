@@ -2,8 +2,8 @@
   var currentSongIndex = 0;
   
   var bgm = document.createElement('audio');
-  var bgmUrlStart = 'https://api.soundcloud.com/tracks/';
-  var bgmUrlEnd = '/stream?client_id=b9d11449cd4c64d461b8b5c30650cd06';
+  var bgmUrlStart = '';
+  var bgmUrlEnd = '';
   bgm.src = bgmUrlStart +songs[0]+ bgmUrlEnd;
   bgm.crossorigin = 'anonymous';
   bgm.autoplay = 'autoplay';
